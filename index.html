@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,27 +7,41 @@
 <style>
 body {
   font-family: Arial;
-  font-color: #C8102E;
+  color: #C8102E;
   text-align: center;
   margin-top: 60px;
   font-size: 28px;
 }
+
+/* Imagen centrada */
 img {
   width: 886px;
   margin-bottom: 30px;
-} 
+}
+
+/* CONTENEDOR FLEX PARA INPUT + BOTÓN */
+.form-container {
+  width: 886px;        /* mismo ancho que el logo */
+  margin: 0 auto;      /* centrar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilo input */
 input {
   font-size: 40px;
   text-align: center;
   padding: 20px;
-  width: 300px;
+  width: 48%;          /* ocupa la mitad */
 }
+
+/* Estilo botón */
 button {
   font-size: 40px;
   padding: 20px 40px;
-  margin-top: 30px;
   border-radius: 10px;
-  width: 300px;
+  width: 48%;          /* ocupa la otra mitad */
 }
 </style>
 </head>
@@ -36,9 +51,11 @@ button {
 
 <h1>LOCALIZADOR DE PARADAS</h1>
 
-<input id="num" placeholder="Número">
-<br>
-<button onclick="go()">IR</button>
+<!-- CONTENEDOR PARA COLOCAR INPUT Y BOTÓN LADO A LADO -->
+<div class="form-container">
+  <input id="num" placeholder="Número">
+  <button onclick="go()">IR</button>
+</div>
 
 <script>
 let data = {};
