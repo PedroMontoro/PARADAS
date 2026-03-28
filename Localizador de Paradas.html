@@ -32,7 +32,10 @@ button {
 <button onclick="go()">IR</button>
 
 <script>
-const data = {
+let data = {};
+
+try {
+  data = {
 "1100": "https://www.google.com/maps/dir/?api=1&destination=28.4184,-16.3038&travelmode=driving",
 "1101": "https://www.google.com/maps/dir/?api=1&destination=28.4176,-16.3067&travelmode=driving",
 "1102": "https://www.google.com/maps/dir/?api=1&destination=28.4163,-16.3088&travelmode=driving",
@@ -3832,7 +3835,10 @@ const data = {
 "9483": "https://www.google.com/maps/dir/?api=1&destination=28.4648,-16.2522&travelmode=driving",
 "9484": "https://www.google.com/maps/dir/?api=1&destination=28.4952,-16.2163&travelmode=driving",
 "9485": "https://www.google.com/maps/dir/?api=1&destination=28.4959,-16.2164&travelmode=driving"
-};
+  };
+} catch (e) {
+  alert("Error en el JSON. Revísalo.");
+}
 
 function go() {
   const n = document.getElementById("num").value.trim();
@@ -3846,4 +3852,5 @@ function go() {
 
 </body>
 </html>
+
 
